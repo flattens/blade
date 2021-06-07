@@ -1,0 +1,35 @@
+{
+    "name": "flattens/flattens",
+    "description": "A framework for laravel and statamic",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Thaden",
+            "email": "hello@tobiasthaden.com"
+        }
+    ],
+    "require": {
+        "statamic/cms": "3.1.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.18",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flattens\\Flattens\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Flattens\\Flattens\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
