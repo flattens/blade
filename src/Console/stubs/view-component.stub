@@ -1,0 +1,37 @@
+<?php
+
+namespace DummyNamespace;
+
+use Flattens\Flattens\Bard\Bard;
+use Flattens\Flattens\View\Component;
+
+class DummyClass extends Component
+{
+    /**
+     * The component content.
+     *
+     * @var array
+     */
+     public $content;
+
+    /**
+     * Create a new component instance.
+     *
+     * @param array $content
+     * @return void
+     */
+    public function __construct($content)
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
+        return DummyView;
+    }
+}
