@@ -7,6 +7,10 @@ use Illuminate\Support\ServiceProvider;
 
 class FlattensServiceProvider extends ServiceProvider
 {
+    public $bindings = [
+        \Statamic\Contracts\Entries\Entry::class => Entry::class
+    ];
+
     public function boot()
     {
         $this->registerCommands();
