@@ -9,8 +9,13 @@ class FlattensServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../views', 'flattens');
         $this->registerCommands();
+        $this->loadViewsFrom($this->viewsPath(), 'flattens');
+
+        $this->publishes([
+            $this->viewsPath() => resource_path('views/vendor/flattens'),
+        ], 'flattens-views');
+    }
 
     protected function registerCommands()
     {
@@ -22,5 +27,9 @@ class FlattensServiceProvider extends ServiceProvider
             ComponentMakeCommand::class,
         ]);
     }
+
+    protected function viewsPath()
+    {
+        return __DIR__.'/../views';
     }
 }
