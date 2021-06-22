@@ -3,24 +3,44 @@
 namespace Flattens\Flattens;
 
 use Flattens\Flattens\Console\ComponentMakeCommand;
+use Flattens\Flattens\Entries\Entry;
 use Illuminate\Support\ServiceProvider;
 
 class FlattensServiceProvider extends ServiceProvider
 {
+    /**
+     * Register container bindings.
+     */
     public $bindings = [
         \Statamic\Contracts\Entries\Entry::class => Entry::class
     ];
 
+    /**
+     * Boot any package services.
+     */
     public function boot()
     {
+        $this->handleViews();
         $this->registerCommands();
-        $this->loadViewsFrom($this->viewsPath(), 'flattens');
+    }
+
+    /**
+     * Handle the package views.
+     */
+    protected function handleViews()
+    {
+        $path = __DIR__.'/../views';
+
+        $this->loadViewsFrom($path, 'flattens');
 
         $this->publishes([
-            $this->viewsPath() => resource_path('views/vendor/flattens'),
+            $path => resource_path('views/vendor/flattens')
         ], 'flattens-views');
     }
 
+    /**
+     * Register any package console commands.
+     */
     protected function registerCommands()
     {
         if (! $this->app->runningInConsole()) {
@@ -30,10 +50,5 @@ class FlattensServiceProvider extends ServiceProvider
         $this->commands([
             ComponentMakeCommand::class,
         ]);
-    }
-
-    protected function viewsPath()
-    {
-        return __DIR__.'/../views';
     }
 }
