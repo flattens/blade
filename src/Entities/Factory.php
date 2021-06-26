@@ -63,7 +63,7 @@ class Factory
     protected function getClassName()
     {
         $className = new Stringable($this->entry->collectionHandle());
-        return $this->getNamespace() . (string) $className->camel()->ucfirst();
+        return $this->getNamespace() . (string) $className->camel()->ucfirst()->singular();
     }
 
     /**
