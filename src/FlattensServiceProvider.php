@@ -3,7 +3,7 @@
 namespace Flattens\Flattens;
 
 use Flattens\Flattens\Console\ComponentMakeCommand;
-use Flattens\Flattens\Entries\Entry;
+use Flattens\Flattens\Entries\EntriesRepository;
 use Illuminate\Support\ServiceProvider;
 
 class FlattensServiceProvider extends ServiceProvider
@@ -12,7 +12,7 @@ class FlattensServiceProvider extends ServiceProvider
      * Register container bindings.
      */
     public $bindings = [
-        \Statamic\Contracts\Entries\Entry::class => Entry::class
+        \Statamic\Contracts\Entries\EntryRepository::class => EntriesRepository::class
     ];
 
     /**

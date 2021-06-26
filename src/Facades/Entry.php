@@ -19,10 +19,9 @@ use Statamic\Contracts\Entries\EntryRepository;
  * @method static array createRules($collection, $site)
  * @method static array updateRules($collection, $entry)
  *
- * @see \Statamic\Stache\Repositories\EntryRepository
+ * @see \Flattens\Flattens\Entries\EntriesRepository
  * @see \Statamic\Stache\Query\EntryQueryBuilder
  * @see \Statamic\Entries\EntryCollection
- * @see \Statamic\Entries\Entry
  * @see \Flattens\Flattens\Entries\Entry
  */
 class Entry extends Facade
