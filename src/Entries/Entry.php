@@ -5,6 +5,7 @@ namespace Flattens\Flattens\Entries;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\View;
 use Flattens\Flattens\Entities\Entity;
+use Flattens\Flattens\Entities\Factory as EntityFactory;
 use Statamic\Entries\Entry as BaseEntry;
 use Statamic\Contracts\Entries\Entry as Contract;
 
@@ -39,7 +40,7 @@ class Entry extends BaseEntry implements Contract
     public function entity()
     {
         if (! $this->entity) {
-            $this->entity = new Entity($this);
+            $this->entity = EntityFactory::make($this);
         }
 
         return $this->entity;

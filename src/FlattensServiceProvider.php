@@ -3,6 +3,7 @@
 namespace Flattens\Flattens;
 
 use Flattens\Flattens\Console\ComponentMakeCommand;
+use Flattens\Flattens\Console\EntityMakeCommand;
 use Flattens\Flattens\Entries\EntriesRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -49,6 +50,7 @@ class FlattensServiceProvider extends ServiceProvider
 
         $this->commands([
             ComponentMakeCommand::class,
+            EntityMakeCommand::class,
         ]);
     }
 }

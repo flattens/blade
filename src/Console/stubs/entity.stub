@@ -1,0 +1,18 @@
+<?php
+
+namespace DummyNamespace;
+
+use Flattens\Flattens\Entities\Entity;
+
+class DummyClass extends Entity
+{
+    /**
+     * Get the template for the entity.
+     *
+     * @return string
+     */
+    public function template()
+    {
+        return parent::template();
+    }
+}
