@@ -1,8 +1,9 @@
 <?php
 
-namespace Flattens\Flattens\Entries;
+namespace Flattens\Flattens\Entities;
 
 use Flattens\Flattens\Bard\Bard;
+use Flattens\Flattens\Entries\Entry;
 
 class Entity
 {
@@ -12,13 +13,6 @@ class Entity
      * @var \Flattens\Flattens\Entries\Entry
      */
     protected $entry;
-
-    /**
-     * The live preview support of the entity.
-     *
-     * @var bool
-     */
-    public $livePreview = true;
 
     /**
      * Create a new entity instance.
@@ -37,7 +31,7 @@ class Entity
      */
     public function template()
     {
-        return null;
+        return $this->entry->template();
     }
 
     /**

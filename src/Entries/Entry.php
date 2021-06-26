@@ -4,6 +4,7 @@ namespace Flattens\Flattens\Entries;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\View;
+use Flattens\Flattens\Entities\Entity;
 use Statamic\Entries\Entry as BaseEntry;
 use Statamic\Contracts\Entries\Entry as Contract;
 
@@ -12,7 +13,7 @@ class Entry extends BaseEntry implements Contract
     /**
      * The concrete definition of the entry.
      *
-     * @var \Flattens\Flattens\Entries\Entity
+     * @var \Flattens\Flattens\Entities\Entity
      */
     protected $entity;
 
@@ -24,9 +25,16 @@ class Entry extends BaseEntry implements Contract
     protected $preview = false;
 
     /**
-     * Get a more concrete entity of the entry.
+     * The preview state of the entry.
      *
-     * @return \Flattens\Flattens\Entries\Entity
+     * @var bool
+     */
+    protected $template = 'default';
+
+    /**
+     * Get the entity of the entry.
+     *
+     * @return \Flattens\Flattens\Entities\Entity
      */
     public function entity()
     {
@@ -59,9 +67,7 @@ class Entry extends BaseEntry implements Contract
      */
     public function livePreviewUrl()
     {
-        if ($this->entity->livePreview) {
-            return $this->cpUrl('collections.entries.preview.edit');
-        }
+        return $this->cpUrl('collections.entries.preview.edit');
     }
 
     /**
@@ -82,8 +88,8 @@ class Entry extends BaseEntry implements Contract
     public function toResponse($request)
     {
         $content = View::make(
-            $this->entity()->template() ?? $this->template(),
-            ['content' => $this]
+            $this->entity()->template(),
+            ['content' => $this->entity()]
         )->render();
         
         return new Response($content);
@@ -99,17 +105,5 @@ class Entry extends BaseEntry implements Contract
         $this->preview = true;
 
         return $this->toResponse($request);
-    }
-
-    /**
-     * Call any method on the entity of the entry.
-     *
-     * @param string $method
-     * @param array $arguments
-     * @return mixed
-     */
-    public function __call($method, $arguments)
-    {
-        return $this->entity()->$method(...$arguments);
     }
 }
