@@ -19,7 +19,6 @@ use Statamic\Contracts\Entries\EntryRepository;
  * @method static array createRules($collection, $site)
  * @method static array updateRules($collection, $entry)
  *
- * @see \Flattens\Flattens\Entries\EntriesRepository
  * @see \Statamic\Stache\Query\EntryQueryBuilder
  * @see \Statamic\Entries\EntryCollection
  * @see \Flattens\Flattens\Entries\Entry

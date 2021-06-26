@@ -2,20 +2,12 @@
 
 namespace Flattens\Flattens;
 
-use Flattens\Flattens\Console\ComponentMakeCommand;
+use Flattens\Flattens\Entries\Entry;
 use Flattens\Flattens\Console\EntityMakeCommand;
-use Flattens\Flattens\Entries\EntriesRepository;
-use Illuminate\Support\ServiceProvider;
+use Flattens\Flattens\Console\ComponentMakeCommand;
 
-class FlattensServiceProvider extends ServiceProvider
+class FlattensServiceProvider extends \Illuminate\Support\ServiceProvider
 {
-    /**
-     * Register container bindings.
-     */
-    public $bindings = [
-        \Statamic\Contracts\Entries\EntryRepository::class => EntriesRepository::class
-    ];
-
     /**
      * Boot any package services.
      */
@@ -23,6 +15,8 @@ class FlattensServiceProvider extends ServiceProvider
     {
         $this->handleViews();
         $this->registerCommands();
+
+        $this->app->bind(\Statamic\Contracts\Entries\Entry::class, Entry::class);
     }
 
     /**
