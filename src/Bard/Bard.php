@@ -17,6 +17,8 @@ class Bard
 
     /**
      * Create a new bard instance.
+     *
+     * @param array $sections
      */
     public function __construct(array $sections)
     {
@@ -26,11 +28,12 @@ class Bard
     /**
      * Create a new bard instance.
      *
+     * @param array|null $sections
      * @return self
      */
-    public static function make(array $sections)
+    public static function make($sections)
     {
-        return new static($sections);
+        return new static($sections ?? []);
     }
     
     /**
