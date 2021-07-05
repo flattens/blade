@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Flattens\Console;
+namespace Flattens\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;

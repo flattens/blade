@@ -1,9 +1,9 @@
 <?php
 
-namespace Flattens\Flattens\Tests\View\Components;
+namespace Flattens\Tests\View\Components;
 
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\Heading;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\Heading;
 
 class HeadingTest extends TestCase
 {

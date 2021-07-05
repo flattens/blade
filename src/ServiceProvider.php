@@ -1,12 +1,12 @@
 <?php
 
-namespace Flattens\Flattens;
+namespace Flattens;
 
-use Flattens\Flattens\Entries\Entry;
-use Flattens\Flattens\Console\EntityMakeCommand;
-use Flattens\Flattens\Console\ComponentMakeCommand;
+use Flattens\Entries\Entry;
+use Flattens\Console\EntityMakeCommand;
+use Flattens\Console\ComponentMakeCommand;
 
-class FlattensServiceProvider extends \Illuminate\Support\ServiceProvider
+class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Boot any package services.

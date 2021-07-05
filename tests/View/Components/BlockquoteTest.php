@@ -1,10 +1,10 @@
 <?php
 
-namespace Flattens\Flattens\Tests\View\Components;
+namespace Flattens\Tests\View\Components;
 
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\Blockquote;
-use Flattens\Flattens\View\Components\Paragraph;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\Blockquote;
+use Flattens\View\Components\Paragraph;
 
 class BlockquoteTest extends TestCase
 {

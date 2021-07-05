@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Flattens\Flattens\Entities\Entity;
+use Flattens\Entities\Entity;
 
 class DummyClass extends Entity
 {

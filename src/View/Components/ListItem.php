@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\Flattens\View\Components;
+namespace Flattens\View\Components;
 
-use Flattens\Flattens\View\Component;
+use Flattens\View\Component;
 
 class ListItem extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\Flattens\View\Component[]
+     * @var \Flattens\View\Component[]
      */
     public $content;
 
     /**
      * Create a new list item instance.
      *
-     * @param \Flattens\Flattens\View\Component[]|\Flattens\Flattens\View\Component
+     * @param \Flattens\View\Component[]|\Flattens\View\Component
      */
     public function __construct($content)
     {

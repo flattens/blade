@@ -1,13 +1,13 @@
 <?php
 
-namespace Flattens\Flattens\Tests\View\Components;
+namespace Flattens\Tests\View\Components;
 
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\Table;
-use Flattens\Flattens\View\Components\TableRow;
-use Flattens\Flattens\View\Components\Paragraph;
-use Flattens\Flattens\View\Components\TableCell;
-use Flattens\Flattens\View\Components\Blockquote;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\Table;
+use Flattens\View\Components\TableRow;
+use Flattens\View\Components\Paragraph;
+use Flattens\View\Components\TableCell;
+use Flattens\View\Components\Blockquote;
 
 class TableTest extends TestCase
 {

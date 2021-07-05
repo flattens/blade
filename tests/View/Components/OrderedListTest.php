@@ -1,11 +1,11 @@
 <?php
 
-namespace Flattens\Flattens\Tests\View\Components;
+namespace Flattens\Tests\View\Components;
 
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\ListItem;
-use Flattens\Flattens\View\Components\Paragraph;
-use Flattens\Flattens\View\Components\OrderedList;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\ListItem;
+use Flattens\View\Components\Paragraph;
+use Flattens\View\Components\OrderedList;
 
 class OrderedListTest extends TestCase
 {

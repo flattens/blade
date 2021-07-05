@@ -1,12 +1,12 @@
 <?php
 
-namespace Flattens\Flattens\Bard\Factories;
+namespace Flattens\Bard\Factories;
 
-use Flattens\Flattens\Bard\Bard;
+use Flattens\Bard\Bard;
 use Illuminate\Support\Collection;
-use Flattens\Flattens\Bard\Contracts\Factory;
-use Flattens\Flattens\View\Components\Blockquote;
-use Flattens\Flattens\View\Components\CodeBlock;
+use Flattens\Bard\Contracts\Factory;
+use Flattens\View\Components\Blockquote;
+use Flattens\View\Components\CodeBlock;
 
 class CodeBlockFactory implements Factory
 {
@@ -33,7 +33,7 @@ class CodeBlockFactory implements Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\Flattens\View\Component
+     * @return \Flattens\View\Component
      */
     public function viewComponent()
     {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Flattens\Flattens\Tests;
+namespace Flattens\Tests;
 
-use Flattens\Flattens\FlattensServiceProvider;
+use Flattens\ServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
     {
-        return [FlattensServiceProvider::class];
+        return [ServiceProvider::class];
     }
 }

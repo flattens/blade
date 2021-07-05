@@ -1,18 +1,18 @@
 <?php
 
-namespace Flattens\Flattens\Tests\Bard;
+namespace Flattens\Tests\Bard;
 
-use Flattens\Flattens\Bard\Bard;
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\Table;
-use Flattens\Flattens\View\Components\Heading;
-use Flattens\Flattens\View\Components\ListItem;
-use Flattens\Flattens\View\Components\TableRow;
-use Flattens\Flattens\View\Components\Paragraph;
-use Flattens\Flattens\View\Components\TableCell;
-use Flattens\Flattens\View\Components\Blockquote;
-use Flattens\Flattens\View\Components\BulletList;
-use Flattens\Flattens\View\Components\OrderedList;
+use Flattens\Bard\Bard;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\Table;
+use Flattens\View\Components\Heading;
+use Flattens\View\Components\ListItem;
+use Flattens\View\Components\TableRow;
+use Flattens\View\Components\Paragraph;
+use Flattens\View\Components\TableCell;
+use Flattens\View\Components\Blockquote;
+use Flattens\View\Components\BulletList;
+use Flattens\View\Components\OrderedList;
 
 class BardTest extends TestCase
 {

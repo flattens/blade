@@ -18,12 +18,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Flattens\\Flattens\\": "src"
+            "Flattens\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flattens\\Flattens\\Tests\\": "tests"
+            "Flattens\\Tests\\": "tests"
         }
     },
     "scripts": {

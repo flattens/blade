@@ -1,11 +1,11 @@
 <?php
 
-namespace Flattens\Flattens\Tests\View\Components;
+namespace Flattens\Tests\View\Components;
 
-use Flattens\Flattens\Tests\TestCase;
-use Flattens\Flattens\View\Components\BulletList;
-use Flattens\Flattens\View\Components\ListItem;
-use Flattens\Flattens\View\Components\Paragraph;
+use Flattens\Tests\TestCase;
+use Flattens\View\Components\BulletList;
+use Flattens\View\Components\ListItem;
+use Flattens\View\Components\Paragraph;
 
 class BulletListTest extends TestCase
 {

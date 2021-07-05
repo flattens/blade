@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\Flattens\View\Components;
+namespace Flattens\View\Components;
 
-use Flattens\Flattens\View\Component;
+use Flattens\View\Component;
 
 class CodeBlock extends Component
 {

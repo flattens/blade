@@ -2,8 +2,8 @@
 
 namespace DummyNamespace;
 
-use Flattens\Flattens\Bard\Bard;
-use Flattens\Flattens\View\Component;
+use Flattens\Bard\Bard;
+use Flattens\View\Component;
 
 class DummyClass extends Component
 {

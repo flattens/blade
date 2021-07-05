@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Flattens\View;
+namespace Flattens\View;
 
 use Exception;
 use Throwable;
