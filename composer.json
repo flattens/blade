@@ -26,6 +26,13 @@
             "Flattens\\Tests\\": "tests"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Flattens\\ServiceProvider"
+            ]
+        }
+    },
     "scripts": {
         "test": "phpunit",
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
