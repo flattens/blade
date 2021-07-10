@@ -6,7 +6,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Facades\App;
 use Flattens\Bard\Contracts\Factory;
-use Flattens\View\ClassNotFoundException;
+use Flattens\View\ComponentNotFoundException;
 
 class SetFactory implements Factory
 {
@@ -63,8 +63,9 @@ class SetFactory implements Factory
         $className = $this->getClassName();
 
         if (! class_exists($className)) {
-            throw new ClassNotFoundException($className);
+            throw new ComponentNotFoundException($className);
         }
+        
         return new $className($this->data());
     }
 
