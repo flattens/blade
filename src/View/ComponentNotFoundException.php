@@ -36,9 +36,8 @@ class ComponentNotFoundException extends Exception implements ProvidesSolution
      */
     public function getSolution() : Solution
     {
-        $solution = new GenerateComponent();
-        $solution->setComponent($this->className);
-
-        return $solution;
+        return tap(new GenerateComponent(), function ($solution) {
+            $solution->setComponent($this->className);
+        });
     }
 }
