@@ -55,7 +55,7 @@ class Entry extends BaseEntry implements Contract
     public function get($key, $fallback = null)
     {
         if ($this->preview) {
-            return $this->getSupplement($key);
+            return $this->getSupplement($key) ?? parent::get($key, $fallback);
         }
 
         return parent::get($key, $fallback);
