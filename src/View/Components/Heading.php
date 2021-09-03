@@ -6,6 +6,11 @@ use Flattens\View\Component;
 
 class Heading extends Component
 {
+    public function name()
+    {
+        return "heading-{$this->level}";
+    }
+
     /**
      * The components content.
      *
@@ -31,7 +36,7 @@ class Heading extends Component
         $this->text = $text;
         $this->level = $level;
     }
-    
+
     /**
      * Render the view component.
      *
