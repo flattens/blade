@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": "^8.0",
         "statamic/cms": "3.2.*",
         "facade/ignition-contracts": "^1.0"
     },
