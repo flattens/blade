@@ -3,6 +3,7 @@
 namespace Flattens;
 
 use Flattens\Entries\Entry;
+use Statamic\Entries\EntryCollection;
 use Flattens\Console\EntityMakeCommand;
 use Flattens\Console\ComponentMakeCommand;
 
@@ -15,6 +16,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->handleViews();
         $this->registerCommands();
+        $this->extendEntryCollection();
 
         $this->app->bind(\Statamic\Contracts\Entries\Entry::class, Entry::class);
     }
@@ -42,5 +44,26 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             ComponentMakeCommand::class,
             EntityMakeCommand::class,
         ]);
+    }
+
+    /**
+     * Macro methods to the EntryCollection.
+     *
+     * @return void
+     */
+    protected function extendEntryCollection()
+    {
+        // Add a structure method to the collection.
+        EntryCollection::macro('structure', function ($collection = null, $site = 'default') {
+            $collection = $collection ?: $this->first()->collectionHandle();
+
+            $tree = \Statamic\Facades\Collection::findByHandle($collection)->structure()->in($site);
+            $ids = collect($tree->tree())->pluck('entry')->toArray();
+
+            return $this->sortBy(fn ($entry) => array_search($entry->id(), $ids));
+        });
+
+        // Add a entities method to the collection.
+        EntryCollection::macro('entities', fn () => $this->map->entity());
     }
 }
