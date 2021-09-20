@@ -55,4 +55,16 @@ class Entity
     {
         return $this->entry->$property;
     }
+
+    /**
+     * Call any method from the entry of the entity.
+     *
+     * @param string $method
+     * @param mixed $arguments
+     * @return mixed
+     */
+    public function __call($method, $arguments)
+    {
+        return call_user_func_array([$this->entry, $method], $arguments);
+    }
 }
