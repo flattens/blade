@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class TableCell extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\View\Component[]
+     * @var \Flattens\Blade\View\Component[]
      */
     public $content;
 
     /**
      * Create a new table cell instance.
      *
-     * @param array @var \Flattens\View\Component[]
+     * @param array @var \Flattens\Blade\View\Component[]
      * @param array $attributes
      */
     public function __construct(array $content, $attributes = [])
@@ -33,6 +33,6 @@ class TableCell extends Component
      */
     public function render()
     {
-        return view('flattens::table-cell', $this->data());
+        return view('Flattens\Blade::table-cell', $this->data());
     }
 }

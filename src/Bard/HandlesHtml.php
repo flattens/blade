@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Bard;
+namespace Flattens\Blade\Bard;
 
 use Illuminate\Support\HtmlString;
 

@@ -1,24 +1,24 @@
 <?php
 
-namespace Flattens\Entities;
+namespace Flattens\Blade\Entities;
 
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Facades\App;
-use Flattens\Entries\Entry;
+use Flattens\Blade\Entries\Entry;
 
 class Factory
 {
     /**
      * The entry where the entity should build for.
      *
-     * @var \Flattens\Entries\Entry
+     * @var \Flattens\Blade\Entries\Entry
      */
     protected $entry;
     
     /**
      * Create a new factory instance.
      *
-     * @param \Flattens\Entries\Entry
+     * @param \Flattens\Blade\Entries\Entry
      * @return void
      */
     public function __construct(Entry $entry)
@@ -29,8 +29,8 @@ class Factory
     /**
      * Create a new entity instance.
      *
-     * @param \Flattens\Entries\Entry
-     * @return \Flattens\Entities\Entity
+     * @param \Flattens\Blade\Entries\Entry
+     * @return \Flattens\Blade\Entities\Entity
      */
     public static function make(Entry $entry)
     {
@@ -42,7 +42,7 @@ class Factory
     /**
      * Build the entity.
      *
-     * @return \Flattens\Entities\Entity
+     * @return \Flattens\Blade\Entities\Entity
      */
     protected function build()
     {

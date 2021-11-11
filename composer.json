@@ -1,5 +1,5 @@
 {
-    "name": "flattens/flattens",
+    "name": "flattens/blade",
     "description": "A framework for laravel and statamic",
     "type": "library",
     "license": "MIT",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Flattens\\": "src"
+            "Flattens\\Blade\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Flattens\\Tests\\": "tests"
+            "Flattens\\Blade\\Tests\\": "tests"
         }
     },
     "extra": {
@@ -34,7 +34,7 @@
         },
         "laravel": {
             "providers": [
-                "Flattens\\ServiceProvider"
+                "Flattens\\Blade\\ServiceProvider"
             ]
         }
     },

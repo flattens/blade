@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class TableHeader extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\View\Component[]
+     * @var \Flattens\Blade\View\Component[]
      */
     public $content;
 
     /**
      * Create a new table header instance.
      *
-     * @param array @var \Flattens\View\Component[]
+     * @param array @var \Flattens\Blade\View\Component[]
      * @param array $attributes
      */
     public function __construct(array $content, $attributes = [])
@@ -33,6 +33,6 @@ class TableHeader extends Component
      */
     public function render()
     {
-        return view('flattens::table-header', $this->data());
+        return view('Flattens\Blade::table-header', $this->data());
     }
 }

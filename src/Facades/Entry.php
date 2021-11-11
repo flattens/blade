@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Facades;
+namespace Flattens\Blade\Facades;
 
 use Illuminate\Support\Facades\Facade;
 use Statamic\Contracts\Entries\EntryRepository;
@@ -21,7 +21,7 @@ use Statamic\Contracts\Entries\EntryRepository;
  *
  * @see \Statamic\Stache\Query\EntryQueryBuilder
  * @see \Statamic\Entries\EntryCollection
- * @see \Flattens\Entries\Entry
+ * @see \Flattens\Blade\Entries\Entry
  */
 class Entry extends Facade
 {

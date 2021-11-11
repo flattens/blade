@@ -1,23 +1,23 @@
 <?php
 
-namespace Flattens\Entities;
+namespace Flattens\Blade\Entities;
 
-use Flattens\Bard\Bard;
-use Flattens\Entries\Entry;
+use Flattens\Blade\Bard\Bard;
+use Flattens\Blade\Entries\Entry;
 
 class Entity
 {
     /**
      * The entry of the entity.
      *
-     * @var \Flattens\Entries\Entry
+     * @var \Flattens\Blade\Entries\Entry
      */
     protected $entry;
 
     /**
      * Create a new entity instance.
      *
-     * @param \Flattens\Entries\Entry $entry
+     * @param \Flattens\Blade\Entries\Entry $entry
      */
     public function __construct(Entry $entry)
     {
@@ -38,7 +38,7 @@ class Entity
      * The view components from the given key.
      *
      * @param string $key
-     * @return \Flattens\View\Component[]
+     * @return \Flattens\Blade\View\Component[]
      */
     public function components($key)
     {

@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class BulletList extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\View\Components\ListItem[]
+     * @var \Flattens\Blade\View\Components\ListItem[]
      */
     public $items;
 
     /**
      * Create a new bullet list instance.
      *
-     * @param \Flattens\View\Components\ListItem[] $items
+     * @param \Flattens\Blade\View\Components\ListItem[] $items
      */
     public function __construct(array $items)
     {
@@ -30,6 +30,6 @@ class BulletList extends Component
      */
     public function render()
     {
-        return view('flattens::bullet-list', $this->data());
+        return view('Flattens\Blade::bullet-list', $this->data());
     }
 }

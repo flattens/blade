@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Console;
+namespace Flattens\Blade\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
@@ -12,14 +12,14 @@ class EntityMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'flattens:entity';
+    protected $name = 'Flattens\Blade:entity';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new flattens entity class';
+    protected $description = 'Create a new Flattens\Blade entity class';
 
     /**
      * Get the stub file for the generator.
@@ -39,7 +39,7 @@ class EntityMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Flattens\Entities';
+        return $rootNamespace.'\Flattens\Blade\Entities';
     }
 
     /**

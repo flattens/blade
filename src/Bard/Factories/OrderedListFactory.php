@@ -1,10 +1,10 @@
 <?php
 
-namespace Flattens\Bard\Factories;
+namespace Flattens\Blade\Bard\Factories;
 
-use Flattens\Bard\Bard;
-use Flattens\Bard\Contracts\Factory;
-use Flattens\View\Components\OrderedList;
+use Flattens\Blade\Bard\Bard;
+use Flattens\Blade\Bard\Contracts\Factory;
+use Flattens\Blade\View\Components\OrderedList;
 
 class OrderedListFactory implements Factory
 {
@@ -31,7 +31,7 @@ class OrderedListFactory implements Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     public function viewComponent()
     {

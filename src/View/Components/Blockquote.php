@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class Blockquote extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\View\Component[]
+     * @var \Flattens\Blade\View\Component[]
      */
     public $content;
 
     /**
      * Create a new blockquote instance.
      *
-     * @param \Flattens\View\Component[] $content
+     * @param \Flattens\Blade\View\Component[] $content
      */
     public function __construct(array $content)
     {
@@ -30,6 +30,6 @@ class Blockquote extends Component
      */
     public function render()
     {
-        return view('flattens::blockquote', $this->data());
+        return view('Flattens\Blade::blockquote', $this->data());
     }
 }

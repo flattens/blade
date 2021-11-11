@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\Tests;
+namespace Flattens\Blade\Tests;
 
-use Flattens\ServiceProvider;
+use Flattens\Blade\ServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class Heading extends Component
 {
@@ -44,6 +44,6 @@ class Heading extends Component
      */
     public function render()
     {
-        return view('flattens::heading', $this->data());
+        return view('Flattens\Blade::heading', $this->data());
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Flattens;
+namespace Flattens\Blade;
 
-use Flattens\Entries\Entry;
+use Flattens\Blade\Entries\Entry;
 use Statamic\Entries\EntryCollection;
-use Flattens\Console\EntityMakeCommand;
-use Flattens\Console\ComponentMakeCommand;
+use Flattens\Blade\Console\EntityMakeCommand;
+use Flattens\Blade\Console\ComponentMakeCommand;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -28,11 +28,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $path = __DIR__.'/../views';
 
-        $this->loadViewsFrom($path, 'flattens');
+        $this->loadViewsFrom($path, 'Flattens\Blade');
 
         $this->publishes([
-            $path => resource_path('views/vendor/flattens')
-        ], 'flattens-views');
+            $path => resource_path('views/vendor/Flattens\Blade')
+        ], 'Flattens\Blade-views');
     }
 
     /**

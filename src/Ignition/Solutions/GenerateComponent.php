@@ -1,11 +1,11 @@
 <?php
 
-namespace Flattens\Ignition\Solutions;
+namespace Flattens\Blade\Ignition\Solutions;
 
 use Facade\IgnitionContracts\Solution;
 use Illuminate\Support\Facades\Artisan;
 use Facade\IgnitionContracts\RunnableSolution;
-use Flattens\Console\ComponentMakeCommand;
+use Flattens\Blade\Console\ComponentMakeCommand;
 
 class GenerateComponent implements RunnableSolution, Solution
 {
@@ -88,7 +88,7 @@ class GenerateComponent implements RunnableSolution, Solution
      */
     public function getSolutionActionDescription(): string
     {
-        return "Generate your component using `php artisan flattens:component {$this->component}`.";
+        return "Generate your component using `php artisan Flattens\Blade:component {$this->component}`.";
     }
 
     /**

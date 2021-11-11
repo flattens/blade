@@ -1,22 +1,22 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class Table extends Component
 {
     /**
      * The components content.
      *
-     * @var \Flattens\View\Components\TableRow[] $rows
+     * @var \Flattens\Blade\View\Components\TableRow[] $rows
      */
     public $rows;
 
     /**
      * Create a new table instance.
      *
-     * @param \Flattens\View\Components\TableRow[] $rows
+     * @param \Flattens\Blade\View\Components\TableRow[] $rows
      */
     public function __construct(array $rows)
     {
@@ -30,6 +30,6 @@ class Table extends Component
      */
     public function render()
     {
-        return view('flattens::table', $this->data());
+        return view('Flattens\Blade::table', $this->data());
     }
 }

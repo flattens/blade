@@ -1,10 +1,10 @@
 <?php
 
-namespace Flattens\Bard\Factories;
+namespace Flattens\Blade\Bard\Factories;
 
-use Flattens\Bard\Contracts\Factory;
-use Flattens\Bard\HandlesHtml;
-use Flattens\View\Components\Heading;
+use Flattens\Blade\Bard\Contracts\Factory;
+use Flattens\Blade\Bard\HandlesHtml;
+use Flattens\Blade\View\Components\Heading;
 
 class HeadingFactory implements Factory
 {
@@ -33,7 +33,7 @@ class HeadingFactory implements Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     public function viewComponent()
     {

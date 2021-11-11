@@ -1,9 +1,9 @@
 <?php
 
-namespace Flattens\Bard\Factories;
+namespace Flattens\Blade\Bard\Factories;
 
-use Flattens\Bard\Contracts\Factory;
-use Flattens\View\Components\HorizontalRule;
+use Flattens\Blade\Bard\Contracts\Factory;
+use Flattens\Blade\View\Components\HorizontalRule;
 
 class HorizontalRuleFactory implements Factory
 {
@@ -30,7 +30,7 @@ class HorizontalRuleFactory implements Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     public function viewComponent()
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class Paragraph extends Component
 {
@@ -30,6 +30,6 @@ class Paragraph extends Component
      */
     public function render()
     {
-        return view('flattens::paragraph', $this->data());
+        return view('Flattens\Blade::paragraph', $this->data());
     }
 }

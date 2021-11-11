@@ -1,11 +1,11 @@
 <?php
 
-namespace Flattens\Entries;
+namespace Flattens\Blade\Entries;
 
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\View;
-use Flattens\Entities\Entity;
-use Flattens\Entities\Factory as EntityFactory;
+use Flattens\Blade\Entities\Entity;
+use Flattens\Blade\Entities\Factory as EntityFactory;
 use Statamic\Entries\Entry as BaseEntry;
 use Statamic\Contracts\Entries\Entry as Contract;
 
@@ -14,7 +14,7 @@ class Entry extends BaseEntry implements Contract
     /**
      * The concrete definition of the entry.
      *
-     * @var \Flattens\Entities\Entity
+     * @var \Flattens\Blade\Entities\Entity
      */
     protected $entity;
 
@@ -35,7 +35,7 @@ class Entry extends BaseEntry implements Contract
     /**
      * Get the entity of the entry.
      *
-     * @return \Flattens\Entities\Entity
+     * @return \Flattens\Blade\Entities\Entity
      */
     public function entity()
     {

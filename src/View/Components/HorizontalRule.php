@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\View\Components;
+namespace Flattens\Blade\View\Components;
 
-use Flattens\View\Component;
+use Flattens\Blade\View\Component;
 
 class HorizontalRule extends Component
 {
@@ -13,6 +13,6 @@ class HorizontalRule extends Component
      */
     public function render()
     {
-        return view('flattens::horizontal-rule', $this->data());
+        return view('Flattens\Blade::horizontal-rule', $this->data());
     }
 }

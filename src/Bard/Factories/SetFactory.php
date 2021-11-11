@@ -1,12 +1,12 @@
 <?php
 
-namespace Flattens\Bard\Factories;
+namespace Flattens\Blade\Bard\Factories;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Stringable;
 use Illuminate\Support\Facades\App;
-use Flattens\Bard\Contracts\Factory;
-use Flattens\View\ComponentNotFoundException;
+use Flattens\Blade\Bard\Contracts\Factory;
+use Flattens\Blade\View\ComponentNotFoundException;
 
 class SetFactory implements Factory
 {
@@ -33,7 +33,7 @@ class SetFactory implements Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     public function viewComponent()
     {
@@ -56,7 +56,7 @@ class SetFactory implements Factory
     /**
      * Build the view component.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     protected function buildComponent()
     {

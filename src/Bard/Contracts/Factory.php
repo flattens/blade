@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Bard\Contracts;
+namespace Flattens\Blade\Bard\Contracts;
 
 interface Factory
 {
@@ -15,7 +15,7 @@ interface Factory
     /**
      * Create a new view component instance.
      *
-     * @return \Flattens\View\Component
+     * @return \Flattens\Blade\View\Component
      */
     public function viewComponent();
 }

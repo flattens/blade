@@ -1,9 +1,9 @@
 <?php
 
-namespace Flattens\Tests\View\Components;
+namespace Flattens\Blade\Tests\View\Components;
 
-use Flattens\Tests\TestCase;
-use Flattens\View\Components\Paragraph;
+use Flattens\Blade\Tests\TestCase;
+use Flattens\Blade\View\Components\Paragraph;
 
 class ParagraphTest extends TestCase
 {

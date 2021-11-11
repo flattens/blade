@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\View;
+namespace Flattens\Blade\View;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component as ViewComponent;

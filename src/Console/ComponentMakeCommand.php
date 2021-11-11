@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Console;
+namespace Flattens\Blade\Console;
 
 use Illuminate\Foundation\Console\ComponentMakeCommand as BaseComponentMakeCommand;
 
@@ -11,14 +11,14 @@ class ComponentMakeCommand extends BaseComponentMakeCommand
      *
      * @var string
      */
-    protected $name = 'flattens:component';
+    protected $name = 'Flattens\Blade:component';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new flattens component class';
+    protected $description = 'Create a new Flattens\Blade component class';
 
     /**
      * Get the stub file for the generator.

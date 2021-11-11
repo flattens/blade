@@ -1,13 +1,13 @@
 <?php
 
-namespace Flattens\View;
+namespace Flattens\Blade\View;
 
 use Exception;
 use Throwable;
 use Illuminate\Support\Str;
 use Facade\IgnitionContracts\Solution;
 use Facade\IgnitionContracts\ProvidesSolution;
-use Flattens\Ignition\Solutions\GenerateComponent;
+use Flattens\Blade\Ignition\Solutions\GenerateComponent;
 
 class ComponentNotFoundException extends Exception implements ProvidesSolution
 {

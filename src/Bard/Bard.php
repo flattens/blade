@@ -1,8 +1,8 @@
 <?php
 
-namespace Flattens\Bard;
+namespace Flattens\Blade\Bard;
 
-use Flattens\Bard\Concerns\ResolvesFactories;
+use Flattens\Blade\Bard\Concerns\ResolvesFactories;
 
 class Bard
 {
@@ -39,7 +39,7 @@ class Bard
     /**
      * Get the bard sections as components.
      *
-     * @return \Flattens\View\Component[]
+     * @return \Flattens\Blade\View\Component[]
      */
     public function components()
     {

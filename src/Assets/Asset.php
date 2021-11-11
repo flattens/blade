@@ -1,6 +1,6 @@
 <?php
 
-namespace Flattens\Assets;
+namespace Flattens\Blade\Assets;
 
 use Statamic\Contracts\Assets\AssetContainer;
 use Statamic\Facades\AssetContainer as ContainerFacade;
