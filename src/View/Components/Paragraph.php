@@ -30,6 +30,6 @@ class Paragraph extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::paragraph', $this->data());
+        return view('flattens::paragraph', $this->data());
     }
 }

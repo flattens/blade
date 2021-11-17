@@ -28,11 +28,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $path = __DIR__.'/../views';
 
-        $this->loadViewsFrom($path, 'Flattens\Blade');
+        $this->loadViewsFrom($path, 'flattens');
 
         $this->publishes([
-            $path => resource_path('views/vendor/Flattens\Blade')
-        ], 'Flattens\Blade-views');
+            $path => resource_path('views/vendor/flattens')
+        ], 'flattens-views');
     }
 
     /**

@@ -30,6 +30,6 @@ class Blockquote extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::blockquote', $this->data());
+        return view('flattens::blockquote', $this->data());
     }
 }

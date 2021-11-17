@@ -30,6 +30,6 @@ class OrderedList extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::ordered-list', $this->data());
+        return view('flattens::ordered-list', $this->data());
     }
 }

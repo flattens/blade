@@ -13,6 +13,6 @@ class HorizontalRule extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::horizontal-rule', $this->data());
+        return view('flattens::horizontal-rule', $this->data());
     }
 }

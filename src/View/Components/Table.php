@@ -30,6 +30,6 @@ class Table extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::table', $this->data());
+        return view('flattens::table', $this->data());
     }
 }

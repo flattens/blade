@@ -33,6 +33,6 @@ class TableHeader extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::table-header', $this->data());
+        return view('flattens::table-header', $this->data());
     }
 }
