@@ -44,6 +44,6 @@ class Heading extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::heading', $this->data());
+        return view('flattens::heading', $this->data());
     }
 }

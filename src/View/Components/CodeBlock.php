@@ -30,6 +30,6 @@ class CodeBlock extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::code-block', $this->data());
+        return view('flattens::code-block', $this->data());
     }
 }

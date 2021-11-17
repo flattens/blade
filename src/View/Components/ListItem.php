@@ -30,6 +30,6 @@ class ListItem extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::list-item', $this->data());
+        return view('flattens::list-item', $this->data());
     }
 }

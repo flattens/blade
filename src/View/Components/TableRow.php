@@ -30,6 +30,6 @@ class TableRow extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::table-row', $this->data());
+        return view('flattens::table-row', $this->data());
     }
 }

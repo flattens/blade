@@ -30,6 +30,6 @@ class BulletList extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::bullet-list', $this->data());
+        return view('flattens::bullet-list', $this->data());
     }
 }

@@ -33,6 +33,6 @@ class TableCell extends Component
      */
     public function render()
     {
-        return view('Flattens\Blade::table-cell', $this->data());
+        return view('flattens::table-cell', $this->data());
     }
 }
