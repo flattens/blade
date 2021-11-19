@@ -11,14 +11,14 @@ class ComponentMakeCommand extends BaseComponentMakeCommand
      *
      * @var string
      */
-    protected $name = 'Flattens\Blade:component';
+    protected $name = 'flattens:component';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new Flattens\Blade component class';
+    protected $description = 'Create a new flattens component class';
 
     /**
      * Get the stub file for the generator.
