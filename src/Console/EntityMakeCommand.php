@@ -12,14 +12,14 @@ class EntityMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Flattens\Blade:entity';
+    protected $name = 'flattens:entity';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new Flattens\Blade entity class';
+    protected $description = 'Create a new flattens entity class';
 
     /**
      * Get the stub file for the generator.
@@ -39,7 +39,7 @@ class EntityMakeCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Flattens\Blade\Entities';
+        return $rootNamespace.'\Flattens\Entities';
     }
 
     /**

@@ -88,7 +88,7 @@ class GenerateComponent implements RunnableSolution, Solution
      */
     public function getSolutionActionDescription(): string
     {
-        return "Generate your component using `php artisan Flattens\Blade:component {$this->component}`.";
+        return "Generate your component using `php artisan flattens:component {$this->component}`.";
     }
 
     /**
