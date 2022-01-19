@@ -2,7 +2,10 @@
 
 namespace Flattens\Blade\Bard;
 
+use Flattens\Blade\Facades\Entry;
+use Illuminate\Support\Str;
 use Illuminate\Support\HtmlString;
+use Statamic\Assets\Asset;
 
 trait HandlesHtml
 {
@@ -30,6 +33,16 @@ trait HandlesHtml
     protected $availableMethods = [
         'text' => 'transformText',
         'hard_break' => 'transformBreak',
+    ];
+
+    /**
+     * A map to link instance types to its belonging facades.
+     *
+     * @var array
+     */
+    protected $availableRelations = [
+        'entry' => Entry::class,
+        'asset' => Asset::class,
     ];
 
     /**
@@ -100,10 +113,30 @@ trait HandlesHtml
     {
         $attrs = array_map(function ($key, $value) {
             if ($value) {
-                return "{$key}=\"{$value}\"";
+                return $this->createAttributeString($key, $value);
             }
         }, array_keys($attrs), $attrs);
 
         return count($attrs) ? ' '.implode(' ', $attrs) : '';
+    }
+
+    /**
+     * Create an attribute string from the given key value pair.
+     *
+     * @param string $key
+     * @param string $value
+     * @return string
+     */
+    protected function createAttributeString($key, $value)
+    {
+        if(Str::startsWith($value, $prefix = 'statamic://')) {
+            [$type, $id] = explode('::', Str::after($value, $prefix));
+
+            $instance = $this->availableRelations[$type]::find($id);
+
+            $value = $instance->url();
+        }
+
+        return "{$key}=\"{$value}\"";
     }
 }
